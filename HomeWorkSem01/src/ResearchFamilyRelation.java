@@ -1,3 +1,6 @@
+/**
+ * Класс "Исследование семейных отношений"
+ */
 public class ResearchFamilyRelation {
 
     public static void printChildren(Human human){
@@ -7,7 +10,6 @@ public class ResearchFamilyRelation {
             if (item.getValue().equals(RelationType.Son)||item.getValue().equals(RelationType.Daughter)){
                 System.out.print(item.getValue().getTranslation() + " ");
                 item.getKey().getInfoLine();
-                //System.out.println(item.getKey());
                 count++;
             }
         }
@@ -23,5 +25,4 @@ public class ResearchFamilyRelation {
             item.getKey().getInfoLine();
         }
     }
-
 }

@@ -1,11 +1,9 @@
 /**
  * Класс "Семейные отношения"
  */
-
 public class FamilyRelation {
     private final Human human1;
     private final Human human2;
-
     /**
      * Конструктор класса "Семейные отношения"
      * @param human1 это человек, который является relationType (тип связи) по отношению к human2
@@ -132,5 +130,4 @@ public class FamilyRelation {
             human1.getCommunications().put(human2, RelationType.Aunt);
         }
     }
-
 }
