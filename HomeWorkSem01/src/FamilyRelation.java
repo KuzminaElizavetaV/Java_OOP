@@ -28,106 +28,106 @@ public class FamilyRelation {
 
     private void setBrother() {
         if (human1 instanceof Man){
-            human2.getCommunications().put(human1, RelationType.Brother);
+            human2.getCommunications().put(human1, RelationType.BROTHER);
         } else if (human1 instanceof Woman){
-            human2.getCommunications().put(human1, RelationType.Sister);
+            human2.getCommunications().put(human1, RelationType.SISTER);
         }
         if (human2 instanceof Man) {
-            human1.getCommunications().put(human2, RelationType.Brother);
+            human1.getCommunications().put(human2, RelationType.BROTHER);
         }
         else if (human2 instanceof Woman) {
-            human1.getCommunications().put(human2, RelationType.Sister);
+            human1.getCommunications().put(human2, RelationType.SISTER);
         }
     }
 
     private void setSpouse() {
         if ((human1 instanceof Man && human2 instanceof Woman) ||
                 (human1 instanceof Woman && human2 instanceof Man)){
-            human1.getCommunications().put(human2, RelationType.Spouse);
-            human2.getCommunications().put(human1, RelationType.Spouse);
+            human1.getCommunications().put(human2, RelationType.SPOUSE);
+            human2.getCommunications().put(human1, RelationType.SPOUSE);
         }
         else System.out.println(human1 + "и " + human2 + "не могут быть супругами");
     }
 
     private void setGrandparent() {
         if (human1 instanceof Man){
-            human2.getCommunications().put(human1, RelationType.GrandFather);
+            human2.getCommunications().put(human1, RelationType.GRANDFATHER);
         } else if (human1 instanceof Woman){
-            human2.getCommunications().put(human1, RelationType.GrandMother);
+            human2.getCommunications().put(human1, RelationType.GRANDMOTHER);
         }
         if (human2 instanceof Man) {
-            human1.getCommunications().put(human2, RelationType.Grandson);
+            human1.getCommunications().put(human2, RelationType.GRANDSON);
         }
         else if (human2 instanceof Woman) {
-            human1.getCommunications().put(human2, RelationType.Granddaughter);
+            human1.getCommunications().put(human2, RelationType.GRANDDAUGHTER);
         }
     }
 
     private void setChild() {
         if (human1 instanceof Man){
-            human2.getCommunications().put(human1, RelationType.Son);
+            human2.getCommunications().put(human1, RelationType.SON);
         } else if (human1 instanceof Woman){
-            human2.getCommunications().put(human1, RelationType.Daughter);
+            human2.getCommunications().put(human1, RelationType.DAUGHTER);
         }
         if (human2 instanceof Man) {
-            human1.getCommunications().put(human2, RelationType.Father);
+            human1.getCommunications().put(human2, RelationType.FATHER);
         }
         else if (human2 instanceof Woman) {
-            human1.getCommunications().put(human2, RelationType.Mother);
+            human1.getCommunications().put(human2, RelationType.MOTHER);
         }
     }
 
     private void setParent(){
         if (human1 instanceof Man){
-            human2.getCommunications().put(human1, RelationType.Father);
+            human2.getCommunications().put(human1, RelationType.FATHER);
         } else if (human1 instanceof Woman){
-            human2.getCommunications().put(human1, RelationType.Mother);
+            human2.getCommunications().put(human1, RelationType.MOTHER);
         }
         if (human2 instanceof Man) {
-            human1.getCommunications().put(human2, RelationType.Son);
+            human1.getCommunications().put(human2, RelationType.SON);
         }
         else if (human2 instanceof Woman) {
-            human1.getCommunications().put(human2, RelationType.Daughter);
+            human1.getCommunications().put(human2, RelationType.DAUGHTER);
         }
     }
     private void setGrandChild() {
         if (human1 instanceof Man){
-            human2.getCommunications().put(human1, RelationType.Grandson);
+            human2.getCommunications().put(human1, RelationType.GRANDSON);
         } else if (human1 instanceof Woman){
-            human2.getCommunications().put(human1, RelationType.Granddaughter);
+            human2.getCommunications().put(human1, RelationType.GRANDDAUGHTER);
         }
         if (human2 instanceof Man) {
-            human1.getCommunications().put(human2, RelationType.GrandFather);
+            human1.getCommunications().put(human2, RelationType.GRANDFATHER);
         }
         else if (human2 instanceof Woman) {
-            human1.getCommunications().put(human2, RelationType.GrandMother);
+            human1.getCommunications().put(human2, RelationType.GRANDMOTHER);
         }
 
     }
     private void setBrotherParent() {
         if (human1 instanceof Man){
-            human2.getCommunications().put(human1, RelationType.Uncle);
+            human2.getCommunications().put(human1, RelationType.UNCLE);
         } else if (human1 instanceof Woman){
-            human2.getCommunications().put(human1, RelationType.Aunt);
+            human2.getCommunications().put(human1, RelationType.AUNT);
         }
         if (human2 instanceof Man) {
-            human1.getCommunications().put(human2, RelationType.Nephew);
+            human1.getCommunications().put(human2, RelationType.NEPHEW);
         }
         else if (human2 instanceof Woman) {
-            human1.getCommunications().put(human2, RelationType.Niece);
+            human1.getCommunications().put(human2, RelationType.NIECE);
         }
     }
     private void setChildBrother() {
         if (human1 instanceof Man){
-            human2.getCommunications().put(human1, RelationType.Nephew);
+            human2.getCommunications().put(human1, RelationType.NEPHEW);
         } else if (human1 instanceof Woman){
-            human2.getCommunications().put(human1, RelationType.Niece);
+            human2.getCommunications().put(human1, RelationType.NIECE);
         }
         if (human2 instanceof Man) {
-            human1.getCommunications().put(human2, RelationType.Uncle);
+            human1.getCommunications().put(human2, RelationType.UNCLE);
         }
         else if (human2 instanceof Woman) {
-            human1.getCommunications().put(human2, RelationType.Aunt);
+            human1.getCommunications().put(human2, RelationType.AUNT);
         }
     }
 }

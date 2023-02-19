@@ -2,11 +2,11 @@
  * Класс enum "Тип родства"
  */
 public enum RelationType {
-    Son("Сын"), Daughter("Дочь"), Father("Папа"),
-    Mother("Мама"), Sister("Сестра"), Brother("Брат"), GrandMother("Бабушка"),
-    GrandFather("Дедушка"), Uncle("Дядя"), Aunt("Тетя"), Niece("Племянница"),
-    Nephew("Племянник"), Spouse("Супруг(а)"), Grandson("Внук"),
-    Granddaughter("Внучка");
+    SON("Сын"), DAUGHTER("Дочь"), FATHER("Папа"),
+    MOTHER("Мама"), SISTER("Сестра"), BROTHER("Брат"), GRANDMOTHER("Бабушка"),
+    GRANDFATHER("Дедушка"), UNCLE("Дядя"), AUNT("Тетя"), NIECE("Племянница"),
+    NEPHEW("Племянник"), SPOUSE("Супруг(а)"), GRANDSON("Внук"),
+    GRANDDAUGHTER("Внучка");
     private final String translation;
 
     RelationType(String translation) {
