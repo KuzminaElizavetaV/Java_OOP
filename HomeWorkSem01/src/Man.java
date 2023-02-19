@@ -11,6 +11,5 @@ public class Man extends Human {
         String GENDER = "мужского пола";
         return super.toString() + ", " + GENDER;
     }
-
 }
 

@@ -7,7 +7,7 @@ public class ResearchFamilyRelation {
         human.getInfo();
         int count = 0;
         for (var item: human.getCommunications().entrySet()) {
-            if (item.getValue().equals(RelationType.Son)||item.getValue().equals(RelationType.Daughter)){
+            if (item.getValue().equals(RelationType.SON)||item.getValue().equals(RelationType.DAUGHTER)){
                 System.out.print(item.getValue().getTranslation() + " ");
                 item.getKey().getInfoLine();
                 count++;
