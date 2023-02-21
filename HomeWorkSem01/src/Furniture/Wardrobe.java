@@ -1,22 +1,30 @@
 package Furniture;
-
 import java.util.Random;
 
+/**
+ * Класс-наследник Шкаф
+ */
 public class Wardrobe extends Furniture{
     private final String id;
     private Condition condition;
     private String location;
     private int occupancy;
-
+    private final int maxOccupancy;
     public static Random randomThing;
     private static int numberWardrobe;
     static {
         randomThing = new Random();
         numberWardrobe = 0;
-
     }
-    private final int maxOccupancy;
 
+    /**
+     * Конструктор объекта класса Шкаф
+     * @param width ширина шкафа, см
+     * @param height высота шкафа, см
+     * @param depth глубина шкафа, см
+     * @param color цвет шкафа
+     * @param location местоположение шкафа
+     */
     public Wardrobe(int width, int height, int depth, String color, String location) {
         super(width, height, depth, color);
         this.location = location;

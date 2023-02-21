@@ -1,7 +1,10 @@
 package Furniture;
 
+/**
+ * Класс enum Состояние (шкафа: открыт-закрыт)
+ */
 public enum Condition {
-    OPENED("Открыто"), CLOSED("Закрыто");
+    OPENED("ОТКРЫТ"), CLOSED("ЗАКРЫТ");
 
     private final String translation;
 

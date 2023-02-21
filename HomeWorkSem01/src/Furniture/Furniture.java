@@ -1,8 +1,13 @@
 package Furniture;
 
+/**
+ * Абстрактный класс Мебель
+ */
 public abstract class Furniture {
-    private int width, height, depth;
-    private String color;
+    private final int width;
+    private final int height;
+    private final int depth;
+    private final String color;
 
     public Furniture(int width, int height, int depth, String color) {
         this.width = width;
