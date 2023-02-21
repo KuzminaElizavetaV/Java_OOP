@@ -8,6 +8,6 @@ public class Woman extends Human {
     @Override
     public String toString() {
         String GENDER = "женского пола";
-        return super.toString() + ", " + GENDER;
+        return super.toString() + ", " + GENDER + ", количество вещей в руках: " + getNumberThings();
     }
 }

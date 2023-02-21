@@ -1,3 +1,5 @@
+import Furniture.Wardrobe;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -68,5 +70,47 @@ public class Main {
             System.out.println("------------------------------------------------");
             System.out.println();
         }
+        System.out.println("-------ВЗАИМОДЕЙСТВИЕ ЧЕЛОВЕКА С ОБЕКТОМ РЕАЛЬНОГО МИРА-------");
+        System.out.println(human1);
+        System.out.println(human4);
+        System.out.println("********************************");
+        Wardrobe wardrobe1 = new Wardrobe(90, 210, 60, "белый", "спальня");
+        Wardrobe wardrobe2 = new Wardrobe(120, 210, 60, "бежевый", "детская");
+        System.out.println(wardrobe1);
+        System.out.println(wardrobe2);
+        System.out.println("********************************");
+        human1.sayHumanPutThingWardrobe(human4, 2, wardrobe1);
+        System.out.println(wardrobe1);
+        System.out.println("********************************");
+        human1.putThing(3, wardrobe2);
+        System.out.println(wardrobe2);
+        System.out.println("********************************");
+        human1.sayHumanChangeLocationWardrobe(human4, wardrobe1, "гостевая");
+        System.out.println(wardrobe1);
+        System.out.println("********************************");
+        human6.changeLocation(wardrobe2, "спальня родителей");
+        System.out.println(wardrobe2);
+        System.out.println("********************************");
+        human8.sayHumanOpenWardrobe(human7, wardrobe2);
+        human8.sayHumanCloseWardrobe(human7, wardrobe2);
+        System.out.println("********************************");
+        System.out.println(human2);
+        human2.clearWardrobe(wardrobe1);
+        System.out.println(human2);
+        System.out.println("********************************");
+        System.out.println(human11);
+        human5.sayHumanClearWardrobe(human11, wardrobe2);
+        System.out.println(human11);
+        System.out.println("********************************");
+        human2.putThing(10, wardrobe1);
+        System.out.println(wardrobe1);
+        human11.putThing(9, wardrobe2);
+        System.out.println(wardrobe2);
+        System.out.println("********************************");
+        System.out.println(human1);
+        human1.takeThing(2, wardrobe1);
+        System.out.println("********************************");
+        System.out.println(human8);
+        human7.sayHumanTakeThing(human8, 3, wardrobe2);
     }
 }

@@ -9,7 +9,7 @@ public class Man extends Human {
     @Override
     public String toString() {
         String GENDER = "мужского пола";
-        return super.toString() + ", " + GENDER;
+        return super.toString() + ", " + GENDER + ", количество вещей в руках: " + getNumberThings();
     }
 }
 
