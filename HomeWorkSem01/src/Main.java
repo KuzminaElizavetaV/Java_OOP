@@ -70,7 +70,7 @@ public class Main {
             System.out.println("------------------------------------------------");
             System.out.println();
         }
-        System.out.println("-------ВЗАИМОДЕЙСТВИЕ ЧЕЛОВЕКА С ОБЕКТОМ РЕАЛЬНОГО МИРА-------");
+        System.out.println("-------ВЗАИМОДЕЙСТВИЕ ЧЕЛОВЕКА С ОБЪЕКТОМ РЕАЛЬНОГО МИРА-------");
         System.out.println(human1);
         System.out.println(human4);
         System.out.println("********************************");

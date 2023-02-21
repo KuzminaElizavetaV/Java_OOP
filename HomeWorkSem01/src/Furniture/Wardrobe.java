@@ -24,7 +24,7 @@ public class Wardrobe extends Furniture{
         this.occupancy = Wardrobe.randomThing.nextInt(0, 25);//0-пустой, 25 - полный
         this.maxOccupancy = Wardrobe.randomThing.nextInt(25,35);
         numberWardrobe++;
-        this.id = String.format("шкаф #%d", numberWardrobe);
+        this.id = String.format("шкаф №%d", numberWardrobe);
 
     }
 

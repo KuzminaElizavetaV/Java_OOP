@@ -65,8 +65,7 @@ public class Human {
     }
     //методы взять/положить/передвинуть/очистить - а в классе шкафа меняется Статус и наполненность
     //у человека изменяется кол-во вещей
-
-    /**
+     /**
      * Открыть шкаф человеку, у которого вызывается этот метод
      * @param wardrobe шкаф, который надор открыть
      */
@@ -149,7 +148,7 @@ public class Human {
             int allThings = wardrobe.getOccupancy();
             wardrobe.setOccupancy(0);
             this.numberThings += allThings;
-            System.out.println(name + " очистил(а) " + wardrobe.getId() +
+            System.out.println(this.name + " выложил(а) все вещи из " + wardrobe.getId() +
                     "\nВ руках у " + this.name + " стало " + this.numberThings + " вещи(ей)");
             closeWardrobe(wardrobe);
         }
@@ -166,7 +165,7 @@ public class Human {
             wardrobe.setOccupancy(0);
             int temp = human.getNumberThings();
             human.setNumberThings(temp + allThings);
-            System.out.println(human.getName() + " очистил(а) " + wardrobe.getId() +
+            System.out.println(human.getName() + " выложил(а) все вещи из " + wardrobe.getId() +
                     "\nВ руках у " + human.getName() + " стало " + human.getNumberThings() + " вещи(ей)");
                 if (wardrobe.getCondition() == Condition.OPENED){
                     System.out.println(human.getName() + " закрыл(а) " + wardrobe.getId());
@@ -189,9 +188,12 @@ public class Human {
                         "\nВ руках у " + this.name + " осталось " + this.numberThings + " вещи(ей)");
             }
             else System.out.println(wardrobe.getId() + " переполнен. Можно положить " +
-                    (wardrobe.getMaxOccupancy()- wardrobe.getOccupancy()) +"\nИли выберите другой шкаф");
+                    (wardrobe.getMaxOccupancy()- wardrobe.getOccupancy()) +" или выберите другой шкаф");
             closeWardrobe(wardrobe);
         }
+        else System.out.println(this.name + " не может положить в " + wardrobe.getId() + " " + quantity +
+                " вещи(ей), так как на руках всего лишь " + this.numberThings + " вещи(ей)");
+
     }
     /**
      * Положить некоторое количество вещей в шкаф человеку, кому это сказали
@@ -215,12 +217,14 @@ public class Human {
                         "\nВ руках у " + human.getName() + " осталось " + human.getNumberThings() + " вещи(ей)");
             }
             else System.out.println(wardrobe.getId() + " переполнен. Можно положить "+
-                    (wardrobe.getMaxOccupancy()- wardrobe.getOccupancy()) +"\nИли выберите другой шкаф");
+                    (wardrobe.getMaxOccupancy()- wardrobe.getOccupancy()) +" или выберите другой шкаф");
             if (wardrobe.getCondition() == Condition.OPENED){
                 System.out.println(human.getName() + " закрыл(а) " + wardrobe.getId());
                 wardrobe.setCondition(Condition.CLOSED);
             }
         }
+        else System.out.println(human.getName() + " не может положить в " + wardrobe.getId() + " " + quantity +
+                " вещи(ей), так как на руках всего лишь " + human.getNumberThings() + " вещи(ей)");
     }
     /**
      * Взять вещь из шкафа человеку, у которого вызывается этот метод
@@ -232,11 +236,12 @@ public class Human {
             openWardrobe(wardrobe);
             this.numberThings+=quantity;
             wardrobe.setOccupancy(wardrobe.getOccupancy() - quantity);
-            System.out.println(name + " взял из " + wardrobe.getId() + " " + quantity + " вещей" +
+            System.out.println(name + " взял(а) из " + wardrobe.getId() + " " + quantity + " вещи(ей)" +
                     "\nВ руках у " + this.name + " стало " + this.numberThings + " вещи(ей)");
             closeWardrobe(wardrobe);
         } else {
-            System.out.println("Нет столько вещей в " + wardrobe.getId() + ", доступно "+ wardrobe.getOccupancy());
+            System.out.println("Нет такого количества вещей в " + wardrobe.getId() + ", доступно " +
+                    wardrobe.getOccupancy() + " вещи(ей)");
         }
     }
     /**
@@ -246,7 +251,7 @@ public class Human {
      * @param wardrobe шкаф, из которого надо взять
      */
     public void sayHumanTakeThing(Human human, int quantity, Wardrobe wardrobe){
-        System.out.println(name + " говорит: \"" + human.getName() + ", надо взять в " + wardrobe.getId()+
+        System.out.println(name + " говорит: \"" + human.getName() + ", надо взять из " + wardrobe.getId()+
                 " " + quantity +" вещи(ей)\"");
         if ((wardrobe.getOccupancy() - quantity) > 0){
             if (wardrobe.getCondition() == Condition.CLOSED){
@@ -256,14 +261,15 @@ public class Human {
             int temp = human.getNumberThings();
             human.setNumberThings(temp + quantity);
             wardrobe.setOccupancy(wardrobe.getOccupancy() - quantity);
-            System.out.println(human.getName() + " взял(a) из " + wardrobe.getId() + " " + quantity + " вещей" +
+            System.out.println(human.getName() + " взял(a) из " + wardrobe.getId() + " " + quantity + " вещи(ей)" +
                     "\nВ руках у " + human.getName() + " стало " + human.getNumberThings() + " вещи(ей)");
             if (wardrobe.getCondition() == Condition.OPENED){
                 System.out.println(human.getName() + " закрыл(а) " + wardrobe.getId());
                 wardrobe.setCondition(Condition.CLOSED);
             }
         } else {
-            System.out.println("Нет столько вещей в " + wardrobe.getId() + ", доступно "+ wardrobe.getOccupancy());
+            System.out.println("Нет такого количества вещей в " + wardrobe.getId() + ", доступно " +
+                    wardrobe.getOccupancy() + " вещи(ей)");
         }
     }
 }
