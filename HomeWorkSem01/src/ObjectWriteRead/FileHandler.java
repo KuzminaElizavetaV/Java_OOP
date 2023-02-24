@@ -1,12 +1,16 @@
 package ObjectWriteRead;
 
+import Animals.Animal;
+import Furniture.Furniture;
+import People.Human;
 import java.io.*;
-import java.util.Scanner;
 
 /**
  * Класс FileHandler создан для записи объектов в файл и чтения объектов из файла
  */
 public class FileHandler implements Writable, Readable, Serializable{
+
+    private File filename;
 
     /**
      * Запись объекта в файл
@@ -14,21 +18,23 @@ public class FileHandler implements Writable, Readable, Serializable{
      */
     @Override
     public void save(Object object) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("ВВЕДИТЕ ИМЯ ФАЙЛА ДЛЯ СОХРАНЕНИЯ ОБЪЕКТА" +
-                " (например, HomeWorkSem01/src/ObjectWriteRead/People.txt:\n");
-        String pathname = input.nextLine();
-        File filename = new File(pathname);
+        if (object instanceof Human) {
+            this.filename = new File("HomeWorkSem01/src/ObjectWriteRead/People.txt");
+        }
+        else if (object instanceof Furniture) {
+            this.filename = new File("HomeWorkSem01/src/ObjectWriteRead/Furniture.txt");
+        } else if (object instanceof Animal) {
+            this.filename = new File("HomeWorkSem01/src/ObjectWriteRead/Animal.txt.txt");
+        }
         try {
-            FileOutputStream fos = new FileOutputStream(filename);
+            FileOutputStream fos = new FileOutputStream(this.filename);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(object);
             oos.close();
-            System.out.println("Объект записан в файл: " + filename);
+            System.out.println("Объект записан в файл: " + this.filename);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     /**

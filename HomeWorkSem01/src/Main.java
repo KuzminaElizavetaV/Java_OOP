@@ -119,17 +119,16 @@ public class Main {
         System.out.println(human8);
         human7.sayHumanTakeThing(human8, 3, wardrobe2);
         System.out.println("********************************");
-        System.out.println("-------ЗАПИСЬ ОБЪЕКТОВ КЛАССА HUMAN В ФАЙЛ-------");
+        System.out.println("-------ЗАПИСЬ ОБЪЕКТОВ В ФАЙЛ-------");
         human1.setWritable(new FileHandler());
         human1.save();
+        wardrobe1.setWritable(new FileHandler());
+        wardrobe1.save();
         System.out.println("********************************");
-        System.out.println("-------ЧТЕНИЕ ОБЪЕКТОВ КЛАССА HUMAN ИЗ ФАЙЛА-------");
+        System.out.println("-------ЧТЕНИЕ ОБЪЕКТОВ ИЗ ФАЙЛА-------");
         human1.setReadable(new FileHandler());
         human1.read();
-
+        wardrobe1.setReadable(new FileHandler());
+        wardrobe1.read();
     }
-
-
-
-
 }

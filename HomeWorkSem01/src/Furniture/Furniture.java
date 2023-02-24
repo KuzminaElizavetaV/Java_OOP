@@ -1,9 +1,18 @@
 package Furniture;
 
+import ObjectWriteRead.FileHandler;
+import ObjectWriteRead.Readable;
+import ObjectWriteRead.Writable;
+
+import java.io.File;
+import java.io.Serializable;
+
 /**
  * Абстрактный класс Мебель
  */
-public abstract class Furniture {
+public abstract class Furniture implements Serializable {
+    private Writable writable;
+    private Readable readable;
     private final int width;
     private final int height;
     private final int depth;
@@ -31,4 +40,24 @@ public abstract class Furniture {
     public String getColor() {
         return color;
     }
+
+    public void setWritable(Writable writable) {
+        this.writable = writable;
+    }
+    public void save(){
+        if (writable instanceof FileHandler){
+            writable.save(this);
+        }
+    }
+
+    public void setReadable(Readable readable) {
+        this.readable = readable;
+    }
+
+    public void read(){
+        if (readable instanceof FileHandler){
+            readable.read(new File("HomeWorkSem01/src/ObjectWriteRead/Furniture.txt"));
+        }
+    }
+
 }
