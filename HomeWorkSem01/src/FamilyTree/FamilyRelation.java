@@ -1,3 +1,9 @@
+package FamilyTree;
+
+import People.Human;
+import People.Man;
+import People.Woman;
+
 /**
  * Класс "Семейные отношения"
  */

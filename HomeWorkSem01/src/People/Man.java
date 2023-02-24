@@ -1,3 +1,5 @@
+package People;
+
 import java.time.LocalDate;
 
 public class Man extends Human {

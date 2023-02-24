@@ -1,3 +1,7 @@
+package FamilyTree;
+
+import People.Human;
+
 /**
  * Класс "Исследование семейных отношений"
  */

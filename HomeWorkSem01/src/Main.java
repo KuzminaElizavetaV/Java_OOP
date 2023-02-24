@@ -1,4 +1,10 @@
+import FamilyTree.FamilyRelation;
+import FamilyTree.ResearchFamilyRelation;
+import ObjectWriteRead.FileHandler;
 import Furniture.Wardrobe;
+import People.Human;
+import People.Man;
+import People.Woman;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -112,5 +118,18 @@ public class Main {
         System.out.println("********************************");
         System.out.println(human8);
         human7.sayHumanTakeThing(human8, 3, wardrobe2);
+        System.out.println("********************************");
+        System.out.println("-------ЗАПИСЬ ОБЪЕКТОВ КЛАССА HUMAN В ФАЙЛ-------");
+        human1.setWritable(new FileHandler());
+        human1.save();
+        System.out.println("********************************");
+        System.out.println("-------ЧТЕНИЕ ОБЪЕКТОВ КЛАССА HUMAN ИЗ ФАЙЛА-------");
+        human1.setReadable(new FileHandler());
+        human1.read();
+
     }
+
+
+
+
 }

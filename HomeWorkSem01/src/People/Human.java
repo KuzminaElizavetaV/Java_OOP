@@ -1,5 +1,14 @@
+package People;
+
+import FamilyTree.RelationType;
+import ObjectWriteRead.FileHandler;
+import ObjectWriteRead.Readable;
+import ObjectWriteRead.Writable;
 import Furniture.Condition;
 import Furniture.Wardrobe;
+
+import java.io.File;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
@@ -8,7 +17,9 @@ import java.util.Random;
 /**
  * Класс "Человек"
  */
-public class Human {
+public class Human implements Serializable {
+    private Writable writable;
+    private Readable readable;
     private final String name;
     private final String surname;
     private final LocalDate dateOfBirth;
@@ -31,6 +42,25 @@ public class Human {
         this.dateOfBirth = dateOfBirth;
         this.communications = new HashMap<>();
         this.numberThings = Human.randomNumberThings.nextInt(0, 10);//задаю рандомное количество вещей
+    }
+
+    public void setWritable(Writable writable) {
+        this.writable = writable;
+    }
+    public void save(){
+        if (writable instanceof FileHandler){
+          writable.save(this);
+        }
+    }
+
+    public void setReadable(Readable readable) {
+        this.readable = readable;
+    }
+
+    public void read(){
+        if (readable instanceof FileHandler){
+            readable.read(new File("HomeWorkSem01/src/ObjectWriteRead/People.txt"));
+        }
     }
 
     public String getName() {

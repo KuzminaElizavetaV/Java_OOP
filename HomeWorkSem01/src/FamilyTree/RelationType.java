@@ -1,3 +1,9 @@
+package FamilyTree;
+
+import javax.management.relation.RoleInfo;
+import javax.management.relation.RoleInfoNotFoundException;
+import java.util.List;
+
 /**
  * Класс enum "Тип родства"
  */
