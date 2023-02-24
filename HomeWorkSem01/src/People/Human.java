@@ -59,7 +59,7 @@ public class Human implements Serializable {
 
     public void read(){
         if (readable instanceof FileHandler){
-            readable.read(new File("HomeWorkSem01/src/ObjectWriteRead/People.txt"));
+            readable.read(new File("HomeWorkSem01/src/ObjectWriteRead/People.bin"));
         }
     }
 

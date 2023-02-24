@@ -19,12 +19,12 @@ public class FileHandler implements Writable, Readable, Serializable{
     @Override
     public void save(Object object) {
         if (object instanceof Human) {
-            this.filename = new File("HomeWorkSem01/src/ObjectWriteRead/People.txt");
+            this.filename = new File("HomeWorkSem01/src/ObjectWriteRead/People.bin");
         }
         else if (object instanceof Furniture) {
-            this.filename = new File("HomeWorkSem01/src/ObjectWriteRead/Furniture.txt");
+            this.filename = new File("HomeWorkSem01/src/ObjectWriteRead/Furniture.bin");
         } else if (object instanceof Animal) {
-            this.filename = new File("HomeWorkSem01/src/ObjectWriteRead/Animal.txt.txt");
+            this.filename = new File("HomeWorkSem01/src/ObjectWriteRead/Animal.txt.bin");
         }
         try {
             FileOutputStream fos = new FileOutputStream(this.filename);

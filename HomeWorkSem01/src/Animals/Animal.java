@@ -6,7 +6,6 @@ package Animals;
 import ObjectWriteRead.FileHandler;
 import ObjectWriteRead.Readable;
 import ObjectWriteRead.Writable;
-
 import java.io.File;
 import java.io.Serializable;
 
@@ -33,7 +32,7 @@ public abstract class Animal implements Serializable {
 
     public void read(){
         if (readable instanceof FileHandler){
-            readable.read(new File("HomeWorkSem01/src/ObjectWriteRead/Animal.txt"));
+            readable.read(new File("HomeWorkSem01/src/ObjectWriteRead/Animal.bin"));
         }
     }
 }

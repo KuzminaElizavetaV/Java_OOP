@@ -56,7 +56,7 @@ public abstract class Furniture implements Serializable {
 
     public void read(){
         if (readable instanceof FileHandler){
-            readable.read(new File("HomeWorkSem01/src/ObjectWriteRead/Furniture.txt"));
+            readable.read(new File("HomeWorkSem01/src/ObjectWriteRead/Furniture.bin"));
         }
     }
 
