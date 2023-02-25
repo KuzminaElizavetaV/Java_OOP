@@ -5,10 +5,7 @@ import Furniture.Wardrobe;
 import People.Human;
 import People.Man;
 import People.Woman;
-
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,22 +21,29 @@ public class Main {
         Human human10 = new Man("Дорофей", "К.", LocalDate.of(2019, 4, 8));
         Human human11 = new Woman("Надежда", "К.", LocalDate.of(2007, 3, 12));
 
-        FamilyRelation relation1 = new FamilyRelation(human1, human2, "parent");
+        //FamilyRelation relation1 = new FamilyRelation(human1, human2, "parent");
+        human2.addParent(human1);
         FamilyRelation relation2 = new FamilyRelation(human3, human1, "child");
         FamilyRelation relation3 = new FamilyRelation(human4, human1, "child");
-        FamilyRelation relation4 = new FamilyRelation(human5, human1, "parent");
-        FamilyRelation relation5 = new FamilyRelation(human6, human1, "parent");
+        //FamilyRelation relation4 = new FamilyRelation(human5, human1, "parent");
+        human1.addParent(human5);
+        //FamilyRelation relation5 = new FamilyRelation(human6, human1, "parent");
+        human1.addParent(human6);
         FamilyRelation relation6 = new FamilyRelation(human5, human6, "spouse");
         FamilyRelation relation7 = new FamilyRelation(human7, human1, "brother");
         FamilyRelation relation8 = new FamilyRelation(human8, human7, "spouse");
-        FamilyRelation relation9 = new FamilyRelation(human7, human9, "parent");
+        //FamilyRelation relation9 = new FamilyRelation(human7, human9, "parent");
+        human9.addParent(human7);
         FamilyRelation relation10 = new FamilyRelation(human9, human8, "child");
-        FamilyRelation relation11 = new FamilyRelation(human7, human10, "parent");
+        //FamilyRelation relation11 = new FamilyRelation(human7, human10, "parent");
+        human10.addParent(human7);
         FamilyRelation relation12 = new FamilyRelation(human10, human8, "child");
         FamilyRelation relation13 = new FamilyRelation(human7, human11, "parent");
-        FamilyRelation relation14 = new FamilyRelation(human5, human1, "parent");
+        //FamilyRelation relation14 = new FamilyRelation(human5, human1, "parent");
+        human1.addParent(human5);
         FamilyRelation relation15 = new FamilyRelation(human1, human6, "child");
-        FamilyRelation relation16 = new FamilyRelation(human5, human7, "parent");
+        //FamilyRelation relation16 = new FamilyRelation(human5, human7, "parent");
+        human7.addParent(human5);
         FamilyRelation relation18 = new FamilyRelation(human7, human6, "child");
         FamilyRelation relation19 = new FamilyRelation(human5, human2, "grandparent");
         FamilyRelation relation20 = new FamilyRelation(human5, human3, "grandparent");
@@ -60,18 +64,15 @@ public class Main {
         FamilyRelation relation35 = new FamilyRelation(human10, human1, "child_brother");
         FamilyRelation relation36 = new FamilyRelation(human11, human1, "child_brother");
 
-        List<Human> humanList = new ArrayList<>(List.of(human1, human2, human3, human4, human5, human6, human7, human8,
-                human9, human10, human11));
-
         System.out.println("-----------ВЫВОД НА ПЕЧАТЬ ДЕТЕЙ------------------");
         System.out.println();
-        for (Human human: humanList) {
+        for (Human human: Human.getHumanList()) {
             ResearchFamilyRelation.printChildren(human);
             System.out.println();
         }
         System.out.println("-------ВЫВОД НА ПЕЧАТЬ ВСЕХ ТЕКУЩИХ СВЯЗЕЙ-------");
         System.out.println();
-        for (Human human: humanList) {
+        for (Human human: Human.getHumanList()) {
             ResearchFamilyRelation.printAllFamilyRelation(human);
             System.out.println("------------------------------------------------");
             System.out.println();
@@ -130,5 +131,8 @@ public class Main {
         human1.read();
         wardrobe1.setReadable(new FileHandler());
         wardrobe1.read();
+        System.out.println(human1.getCommunications());
+
+
     }
 }

@@ -20,7 +20,7 @@ public class FamilyRelation {
         this.human1 = human1;
         this.human2 = human2;
         switch (relationType) {
-            case "parent" -> setParent();
+            //case "parent" -> setParent();
             case "child" -> setChild();
             case "grandparent" -> setGrandparent();
             case "spouse" -> setSpouse();
@@ -31,6 +31,20 @@ public class FamilyRelation {
             default -> System.out.println("Неизвестная степени родства");
         }
     }
+
+    /**private void setParent(){
+     if (human1 instanceof Man){
+     human2.getCommunications().put(human1, RelationType.FATHER);
+     } else if (human1 instanceof Woman){
+     human2.getCommunications().put(human1, RelationType.MOTHER);
+     }
+     if (human2 instanceof Man) {
+     human1.getCommunications().put(human2, RelationType.SON);
+     }
+     else if (human2 instanceof Woman) {
+     human1.getCommunications().put(human2, RelationType.DAUGHTER);
+     }
+     }*/
 
     private void setBrother() {
         if (human1 instanceof Man){
@@ -83,19 +97,7 @@ public class FamilyRelation {
         }
     }
 
-    private void setParent(){
-        if (human1 instanceof Man){
-            human2.getCommunications().put(human1, RelationType.FATHER);
-        } else if (human1 instanceof Woman){
-            human2.getCommunications().put(human1, RelationType.MOTHER);
-        }
-        if (human2 instanceof Man) {
-            human1.getCommunications().put(human2, RelationType.SON);
-        }
-        else if (human2 instanceof Woman) {
-            human1.getCommunications().put(human2, RelationType.DAUGHTER);
-        }
-    }
+
     private void setGrandChild() {
         if (human1 instanceof Man){
             human2.getCommunications().put(human1, RelationType.GRANDSON);

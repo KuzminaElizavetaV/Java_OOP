@@ -1,6 +1,7 @@
 package ObjectWriteRead;
 
 import Animals.Animal;
+import FamilyTree.ResearchFamilyRelation;
 import Furniture.Furniture;
 import People.Human;
 import java.io.*;

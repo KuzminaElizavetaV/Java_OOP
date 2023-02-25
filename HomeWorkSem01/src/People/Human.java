@@ -1,5 +1,6 @@
 package People;
 
+import FamilyTree.FamilyRelationNew;
 import FamilyTree.RelationType;
 import ObjectWriteRead.FileHandler;
 import ObjectWriteRead.Readable;
@@ -10,14 +11,12 @@ import Furniture.Wardrobe;
 import java.io.File;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Класс "Человек"
  */
-public class Human implements Serializable {
+public class Human implements Serializable, FamilyRelationNew {
     private Writable writable;
     private Readable readable;
     private final String name;
@@ -26,8 +25,10 @@ public class Human implements Serializable {
     private final Map<Human, RelationType> communications;
     private int numberThings;
     public static Random randomNumberThings;
-    static {
+    static List<Human> humanList; // Добавила поле список всех объектов класса Human, в который автоматически добавляется
+    static {                      // каждый новый объект этого класса
         randomNumberThings = new Random();
+        humanList = new ArrayList<>();
     }
     /**
      * Конструктор класса "Человек"
@@ -42,6 +43,11 @@ public class Human implements Serializable {
         this.dateOfBirth = dateOfBirth;
         this.communications = new HashMap<>();
         this.numberThings = Human.randomNumberThings.nextInt(0, 10);//задаю рандомное количество вещей
+        humanList.add(this);
+    }
+
+    public static List<Human> getHumanList() {
+        return humanList;
     }
 
     public void setWritable(Writable writable) {
@@ -76,6 +82,10 @@ public class Human implements Serializable {
         return communications;
     }
 
+    public void addCommunication(Human human, RelationType type){
+        this.communications.put(human, type);
+    }
+
     public void getInfo() {
         System.out.println("******ИНФОРМАЦИЯ ОБ ОБЪЕКТЕ******\n" +
                 "ИМЯ, ФАМИЛИЯ: " + name + " " + surname + "\nДАТА РОЖДЕНИЯ: " + dateOfBirth);
@@ -93,6 +103,22 @@ public class Human implements Serializable {
     public void setNumberThings(int numberThings) {
         this.numberThings = numberThings;
     }
+
+    @Override
+    public void addParent(Human human) {
+        if (this instanceof Man){
+            human.addCommunication(this, RelationType.SON);
+        } else if (this instanceof Woman){
+            human.addCommunication(this, RelationType.DAUGHTER);
+        }
+        if (human instanceof Man) {
+            this.addCommunication(human, RelationType.FATHER);
+        }
+        else if (human instanceof Woman) {
+            this.addCommunication(human, RelationType.MOTHER);
+        }
+    }
+
     //методы взять/положить/передвинуть/очистить - а в классе шкафа меняется Статус и наполненность
     //у человека изменяется кол-во вещей
      /**
