@@ -59,14 +59,11 @@ public class TaskStorage {
     }
 
     public static void searchByPriority(String priority) {
-
         TaskPlanner.printTitle();
         for (Task task : taskStorage) {
             if (task.getPriority().getTranslation().equals(priority))
                 taskStorageNew.add(task);
-
         }
-
         if (taskStorageNew.isEmpty())
             System.out.println("Нет таких задач");
         else {
