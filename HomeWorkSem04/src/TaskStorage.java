@@ -59,13 +59,12 @@ public class TaskStorage {
     public static void searchByPriority(String priority) {
         TaskPlanner.printTitle();
         for (Task task : taskStorage) {
-            if (task.getPriority().getTranslation().equals(priority))
-                System.out.println(task.printFormat());
-            else break;
+            if (!task.getPriority().getTranslation().equals(priority))
+                System.out.println("Нет таких задач");
+            else System.out.println(task.printFormat());
         }
-        System.out.println("Нет задач с таким приоритетом!");
         System.out.println("--------------------------------------------------------------------------------------" +
-                "-------------------------");
+                        "-------------------------");
     }
 }
 

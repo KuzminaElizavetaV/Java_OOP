@@ -1,6 +1,6 @@
 {
-  {taskID: "№1", priority: "НЕМЕДЛЕННЫЙ", description: "Сдать домашку 4 по ООП", author: "Кузьмина Е.В.", dateAdded: "2023-02-28", timeAdded: "19:22:44.925986500", dateDeadline: "2023-03-03", timeDeadline: "20:00"}
-  {taskID: "№4", priority: "НИЗКИЙ", description: "Подготовить годовой отчет", author: "Хамидулов В.О.", dateAdded: "2023-02-28", timeAdded: "19:22:44.927984800", dateDeadline: "2023-03-15", timeDeadline: "20:00"}
-  {taskID: "№2", priority: "НИЗКИЙ", description: "Поклеить обои", author: "Кузьмина Т.Н.", dateAdded: "2023-02-28", timeAdded: "19:22:44.926987", dateDeadline: "2023-04-15", timeDeadline: "20:00"}
-  {taskID: "№3", priority: "НИЗКИЙ", description: "Сдать домашку 5 по ООП", author: "Кузьмина Е.В.", dateAdded: "2023-02-28", timeAdded: "19:22:44.926987", dateDeadline: "2023-05-15", timeDeadline: "20:00"}
+  {taskID: "№1", priority: "НЕМЕДЛЕННЫЙ", description: "Сдать домашку 4 по ООП", author: "Кузьмина Е.В.", dateAdded: "2023-02-28", timeAdded: "20:20:40.443568700", dateDeadline: "2023-03-03", timeDeadline: "20:00"}
+  {taskID: "№4", priority: "СРЕДНИЙ", description: "Подготовить годовой отчет", author: "Хамидулов В.О.", dateAdded: "2023-02-28", timeAdded: "20:20:40.445569", dateDeadline: "2023-03-15", timeDeadline: "20:00"}
+  {taskID: "№2", priority: "НИЗКИЙ", description: "Поклеить обои", author: "Кузьмина Т.Н.", dateAdded: "2023-02-28", timeAdded: "20:20:40.445569", dateDeadline: "2023-04-15", timeDeadline: "20:00"}
+  {taskID: "№3", priority: "НИЗКИЙ", description: "Сдать домашку 5 по ООП", author: "Кузьмина Е.В.", dateAdded: "2023-02-28", timeAdded: "20:20:40.445569", dateDeadline: "2023-05-15", timeDeadline: "20:00"}
 }
