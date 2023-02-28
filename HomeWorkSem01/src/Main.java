@@ -131,8 +131,6 @@ public class Main {
         human1.read();
         wardrobe1.setReadable(new FileHandler());
         wardrobe1.read();
-        System.out.println(human1.getCommunications());
-
 
     }
 }
