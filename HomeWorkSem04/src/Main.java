@@ -10,12 +10,16 @@ public class Main {
                 LocalDateTime.of(2023, 5, 15, 20, 0));
         Task task3 = new Task("Подготовить годовой отчет", "Хамидулов В.О.",
                 LocalDateTime.of(2023, 3, 15, 20, 0));
+        Task task5 = new Task("подготовиться к ОГЭ", "Кузьмин В.В.",
+                LocalDateTime.of(2023, 3, 15, 15, 0));
+
 
         TaskStorage.addTask(task);
         TaskStorage.addTask(task1);
         TaskStorage.addTask(task2);
         TaskStorage.addTask(task3);
-        DataExportImport.jsonWriter();
+        TaskStorage.addTask(task5);
+        //DataExportImport.jsonWriter(); //тестила что получается
 
         UserInterface.startApplication(); // запуск нтерфейса пользователя
         //выгрузка в csv пока только

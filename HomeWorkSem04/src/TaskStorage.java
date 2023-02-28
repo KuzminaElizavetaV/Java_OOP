@@ -51,7 +51,7 @@ public class TaskStorage {
     public static void searchByDeadline(LocalDate date) {
         TaskPlanner.printTitle();
         for (Task task : taskStorage) {
-            if (task.compareTo(date) <= 0)
+            if (task.compareTo(date) == 0)
                 System.out.println(task.printFormat());
         }
         System.out.println("--------------------------------------------------------------------------------------" +

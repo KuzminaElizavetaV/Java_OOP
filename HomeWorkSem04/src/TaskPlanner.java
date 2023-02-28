@@ -57,7 +57,7 @@ public class TaskPlanner {
             LocalDate deadlineDate = LocalDate.parse(sc.nextLine());
             System.out.println(deadlineDate);
             TaskStorage.searchByDeadline(deadlineDate);
-        }
+        }else System.out.println("Ошибка ввода - попробуйте снова");
 
     }
     public void showTasksByPriority(){
