@@ -7,9 +7,11 @@ import java.util.TreeSet;
  */
 public class TaskStorage {
     private static TreeSet<Task> taskStorage;
+    private static TreeSet<Task> taskStorageNew;
 
     static {//множество задач сортируется по срочности
         taskStorage = new TreeSet<>(Comparator.comparing(Task::getDeadline));
+        taskStorageNew = new TreeSet<>(Comparator.comparing(Task::getDeadline));
     }
 
     public static TreeSet<Task> getTaskStorage() {
@@ -57,14 +59,24 @@ public class TaskStorage {
     }
 
     public static void searchByPriority(String priority) {
+
         TaskPlanner.printTitle();
         for (Task task : taskStorage) {
-            if (!task.getPriority().getTranslation().equals(priority))
-                System.out.println("Нет таких задач");
-            else System.out.println(task.printFormat());
+            if (task.getPriority().getTranslation().equals(priority))
+                taskStorageNew.add(task);
+
+        }
+
+        if (taskStorageNew.isEmpty())
+            System.out.println("Нет таких задач");
+        else {
+            for (Task task: taskStorageNew) {
+                System.out.println(task.printFormat());
+            }
         }
         System.out.println("--------------------------------------------------------------------------------------" +
                         "-------------------------");
+        taskStorageNew.clear();
     }
 }
 
