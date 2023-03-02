@@ -134,7 +134,8 @@ public class TaskPlanner {
     public void loadData(){
         //здесь аналогично подумать над иерархией классов/методов - пока просто вызов загрузки csv
         //DataExchange.csvReader();
-        System.out.println("На данный момент метод в разработке))");
+        //System.out.println("На данный момент метод в разработке))");
+        DataExportImport.csvReader();
     }
     public  static void printTitle(){
         System.out.println("""

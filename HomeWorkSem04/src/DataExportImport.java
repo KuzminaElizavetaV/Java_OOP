@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.Scanner;
 
 //предназначен для описания логики обмена данными с файлами
 //по хорошему здесь прописать поведение - выгрузка/загрузка, а нюансы в классах разных форматов
@@ -40,17 +41,20 @@ public class DataExportImport {
     }
 
     //загрузка из файла - в разработке - не окончен
-    public static void csvReader() throws IOException {
+    public static void csvReader() {
         String pathToCsv = "D:\\MyStudy\\Java_OOP\\HomeWorkSem04\\src\\task.csv";
-        File csvFile = new File(pathToCsv);
-        if (csvFile.isFile()) {
-            BufferedReader csvReader = new BufferedReader(new FileReader(pathToCsv));
-            //while () {
-//                не успела закончить
-//            }
-            csvReader.close();
+        try {
+            File file = new File(pathToCsv);
+            if (file.isFile()) {
+                FileReader reader = new FileReader(file);
+                Scanner scan = new Scanner(reader);
+                while (scan.hasNextLine()) {
+                    System.out.println(scan.nextLine());
+                }
+                reader.close();
+            }
+        } catch (Exception e) {
+                e.printStackTrace();
         }
-
-
     }
 }
