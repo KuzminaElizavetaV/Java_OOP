@@ -1,11 +1,13 @@
-package Client;
+package UI;
 
-import Logger.MyLog;
+import MVP.View;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.util.Scanner;
 import java.util.logging.Logger;
+import Logger.MyLog;
 
 public class ConsoleView implements View {
     static MyLog myLog = new MyLog(Logger.getLogger(ConsoleView.class.getName()));
@@ -70,4 +72,3 @@ public class ConsoleView implements View {
         }
     }
 }
-

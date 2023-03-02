@@ -17,7 +17,7 @@ public class MyLog {
 
     public void log(String info) {
         try {
-            FileHandler fh = new FileHandler("HomeWorkSem05\\src\\logCalc.txt", true);
+            FileHandler fh = new FileHandler("HomeWorkSem05\\src\\CalculatorLog.txt", true);
             logger.addHandler(fh);
             SimpleFormatter sFormat = new SimpleFormatter();
             fh.setFormatter(sFormat);

@@ -1,10 +1,8 @@
-package Infrastructure.CalcComplex;
+package MVP;
 
-import Infrastructure.Complex;
-import Infrastructure.CalcModel;
+import Infrastucture.Complex;
 
-public class CalcComplexModel extends CalcModel<Complex> {
-
+public class CalcComplex extends CalcModel<Complex> {
     @Override
     public Complex result(char operation) throws Exception {
         Complex result = null;
@@ -13,7 +11,7 @@ public class CalcComplexModel extends CalcModel<Complex> {
             case '-' -> result = this.x.sub(this.y);
             case '*' -> result = this.x.mul(this.y);
             case '/' -> {
-                if (this.y.getReal() == 0 && this.y.getImaginary()==0) {
+                if (this.y.getReal() == 0 && this.y.getImage()==0) {
                     throw new Exception("Деление на --0--!");
                 } else result = this.x.div(this.y);
             }
@@ -30,4 +28,5 @@ public class CalcComplexModel extends CalcModel<Complex> {
     public void setY(Complex value) {
         this.y = value;
     }
+
 }

@@ -1,0 +1,16 @@
+мар. 03, 2023 12:13:47 AM Logger.MyLog log
+INFO: Выбран пункт меню: 1 - операции с рац.числами 
+мар. 03, 2023 12:13:54 AM Logger.MyLog log
+INFO: Введите число:  - 13.0
+мар. 03, 2023 12:14:02 AM Logger.MyLog log
+INFO: Введите операцию (+,-,*,/):  - +
+мар. 03, 2023 12:14:08 AM Logger.MyLog log
+INFO: Введите число:  - 100.0
+мар. 03, 2023 12:14:08 AM Logger.MyLog log
+INFO: Выдан результат 13.0 + 100.0 =  113.0
+мар. 03, 2023 12:14:16 AM Logger.MyLog log
+INFO: 3 - посмотреть лог файл
+мар. 03, 2023 12:14:16 AM Logger.MyLog log
+INFO: HomeWorkSem05\src\CalculatorLog.txt - выдано содержание файла логирования по запросу
+мар. 03, 2023 12:14:41 AM Logger.MyLog log
+INFO: 4 - выход из программы

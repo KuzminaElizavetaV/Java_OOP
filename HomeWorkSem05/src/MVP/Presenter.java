@@ -1,14 +1,9 @@
-package Presentor;
+package MVP;
 
-import Client.View;
-import Infrastructure.Complex;
-import Infrastructure.CalcComplex.CalcComplexModel;
-import Infrastructure.CalcModel;
-import Infrastructure.CalcRational.CalcRationalModel;
-import Logger.MyLog;
-import Infrastructure.Model;
+import Infrastucture.Complex;
 
 import java.util.logging.Logger;
+import Logger.MyLog;
 
 public class Presenter <T extends CalcModel> {
     static MyLog myLog = new MyLog(Logger.getLogger(Presenter.class.getName()));
@@ -23,8 +18,8 @@ public class Presenter <T extends CalcModel> {
 
     //или создать отдельный класс для обработки PresenterComplex, экз-р которого запускать в App при соотв.выборе?
     public void buttonClick(){
-        if (this.model instanceof CalcRationalModel) this.buttonClickRational();
-        else if (this.model instanceof CalcComplexModel) buttonClickComplex();
+        if (this.model instanceof CalcRational) this.buttonClickRational();
+        else if (this.model instanceof CalcComplex) buttonClickComplex();
     }
     public void buttonClickRational() {
         Double res = null;
