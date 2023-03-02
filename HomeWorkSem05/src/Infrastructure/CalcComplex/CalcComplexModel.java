@@ -1,7 +1,7 @@
-package MVP.CalcComlex;
+package Infrastructure.CalcComplex;
 
 import Infrastructure.Complex;
-import MVP.CalcModel;
+import Infrastructure.CalcModel;
 
 public class CalcComplexModel extends CalcModel<Complex> {
 

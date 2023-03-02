@@ -1,4 +1,4 @@
-package MVP;
+package Client;
 
 import java.io.File;
 

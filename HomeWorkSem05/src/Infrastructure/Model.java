@@ -1,4 +1,4 @@
-package MVP;
+package Infrastructure;
 
 public interface Model <T> {
     T result(char operation) throws Exception;

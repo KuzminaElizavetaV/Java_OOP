@@ -1,6 +1,6 @@
-package MVP.CalcRational;
+package Infrastructure.CalcRational;
 
-import MVP.CalcModel;
+import Infrastructure.CalcModel;
 
 public class CalcRationalModel extends CalcModel<Double> {
 

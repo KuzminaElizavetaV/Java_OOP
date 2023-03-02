@@ -1,11 +1,9 @@
 package Client;
 
 import Logger.MyLog;
-import MVP.CalcComlex.CalcComplexModel;
-import MVP.CalcRational.CalcRationalModel;
-import MVP.Model;
-import MVP.Presenter;
-import MVP.View;
+import Infrastructure.CalcComplex.CalcComplexModel;
+import Infrastructure.CalcRational.CalcRationalModel;
+import Presentor.Presenter;
 
 import java.io.File;
 import java.util.Scanner;
@@ -17,38 +15,37 @@ public class App {
     static MyLog myLog = new MyLog(Logger.getLogger(App.class.getName()));
 
     static View view = new ConsoleView();
-    static Model model;
     static Presenter presenter = new Presenter<>(new CalcRationalModel(), view);
 
     public static void start() {
         while (true) {
             System.out.println("""
-                    Выберите пункт меню:
-                        1 - операции с рац.числами
-                        2 - операции с комплекс.числами
-                        3 - посмотреть лог файл
-                        4 - выход из программы
+                    ***** ДЛЯ ВЫБОРА ОПЕРАЦИИ ВВЕДИТЕ ЧИСЛО *****
+                        1 => ОПЕРАЦИИ С РАЦИОНАЛЬНЫМИ ЧИСЛАМИ
+                        2 => ОПЕРАЦИИ С КОМПЛЕКСНЫМИ ЧИСЛАМИ
+                        3 => ПОСМОТРЕТЬ ФАЙЛ ЛОГИРОВАНИЯ
+                        4 => ВЫХОД ИЗ ПРОГРАММЫ
                     """);
             switch (in.nextInt()) {
                 case 1 -> {
-                    myLog.log("Выбран пункт меню: 1 - операции с рац.числами ");
+                    myLog.log("ВЫБРАН ПУНКТ МЕНЮ => ОПЕРАЦИИ С РАЦИОНАЛЬНЫМИ ЧИСЛАМИ ");
                     presenter = new Presenter<>(new CalcRationalModel(), view);
                     presenter.buttonClick();//или сразу так? presenter.buttonClickRational();
                 }
                 case 2 -> {
-                    myLog.log("2 - операции с комплекс.числами");
+                    myLog.log("ВЫБРАН ПУНКТ МЕНЮ => ОПЕРАЦИИ С КОМПЛЕКСНЫМИ ЧИСЛАМИ");
                     presenter = new Presenter<>(new CalcComplexModel(), view);
                     presenter.buttonClick(); //или так? buttonClickComplex();
                 }
                 case 3 -> {
-                    myLog.log("3 - посмотреть лог файл");
-                    view.viewLog(new File("HomeWorkSem05\\logCalc.txt"));
+                    myLog.log("ВЫБРАН ПУНКТ МЕНЮ => ПОСМОТРЕТЬ ФАЙЛ ЛОГИРОВАНИЯ");
+                    view.viewLog(new File("HomeWorkSem05\\src\\logCalc.txt"));
                 }
                 case 4 -> {
-                    myLog.log("4 - выход из программы");
+                    myLog.log("ВЫБРАН ПУНКТ МЕНЮ => ВЫХОД ИЗ ПРОГРАММЫ");
                     return;
                 }
-                default -> myLog.log("Выбран некорректный пункт меню. Повторите ввод");
+                default -> myLog.log("Введен некорректный пункт меню. Повторите ввод");
             }
         }
     }

@@ -1,9 +1,12 @@
-package MVP;
+package Presentor;
 
+import Client.View;
 import Infrastructure.Complex;
-import MVP.CalcComlex.CalcComplexModel;
-import MVP.CalcRational.CalcRationalModel;
+import Infrastructure.CalcComplex.CalcComplexModel;
+import Infrastructure.CalcModel;
+import Infrastructure.CalcRational.CalcRationalModel;
 import Logger.MyLog;
+import Infrastructure.Model;
 
 import java.util.logging.Logger;
 

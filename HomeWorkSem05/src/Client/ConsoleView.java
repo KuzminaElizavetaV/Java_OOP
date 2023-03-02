@@ -1,7 +1,5 @@
 package Client;
 
-import MVP.View;
-
 import Logger.MyLog;
 import java.io.BufferedReader;
 import java.io.File;
