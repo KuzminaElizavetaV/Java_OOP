@@ -10,7 +10,6 @@ import java.util.logging.SimpleFormatter;
  */
 public class MyLogger {
     Logger logger;
-
     /**
      * Конструктор класса МойЖурнал
      * @param logger запись лога конкретной подсистемы

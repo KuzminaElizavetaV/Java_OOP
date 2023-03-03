@@ -1,47 +1,3 @@
-мар. 03, 2023 12:13:47 AM Logger.MyLogger log
-INFO: Выбран пункт меню: 1 - операции с рац.числами 
-мар. 03, 2023 12:13:54 AM Logger.MyLogger log
-INFO: Введите число:  - 13.0
-мар. 03, 2023 12:14:02 AM Logger.MyLogger log
-INFO: Введите операцию (+,-,*,/):  - +
-мар. 03, 2023 12:14:08 AM Logger.MyLogger log
-INFO: Введите число:  - 100.0
-мар. 03, 2023 12:14:08 AM Logger.MyLogger log
-INFO: Выдан результат 13.0 + 100.0 =  113.0
-мар. 03, 2023 12:14:16 AM Logger.MyLogger log
-INFO: 3 - посмотреть лог файл
-мар. 03, 2023 12:14:16 AM Logger.MyLogger log
-INFO: HomeWorkSem05\src\CalculatorLog.txt - выдано содержание файла логирования по запросу
-мар. 03, 2023 12:14:41 AM Logger.MyLogger log
-INFO: 4 - выход из программы
-мар. 03, 2023 11:07:41 AM Logger.MyLogger log
-INFO: ВЫБРАН ПУНКТ МЕНЮ => ОПЕРАЦИИ С РАЦИОНАЛЬНЫМИ ЧИСЛАМИ 
-мар. 03, 2023 11:07:44 AM Logger.MyLogger log
-INFO: Введите число:  - 34.0
-мар. 03, 2023 11:07:49 AM Logger.MyLogger log
-INFO: Введите операцию (+,-,*,/):  - +
-мар. 03, 2023 11:07:53 AM Logger.MyLogger log
-INFO: Введите число:  - 45.0
-мар. 03, 2023 11:07:53 AM Logger.MyLogger log
-INFO: Выдан результат 34.0 + 45.0 =  79.0
-мар. 03, 2023 11:08:00 AM Logger.MyLogger log
-INFO: ВЫБРАН ПУНКТ МЕНЮ => ПРОСМОТР ФАЙЛА ЛОГИРОВАНИЯ 
-мар. 03, 2023 11:08:00 AM Logger.MyLogger log
-INFO: HomeWorkSem05\src\CalculatorLog.txt - выдано содержание файла логирования по запросу
-мар. 03, 2023 11:08:29 AM Logger.MyLogger log
-INFO: ВЫБРАН ПУНКТ МЕНЮ => ОПЕРАЦИИ С КОМПЛЕКСНЫМИ ЧИСЛАМИ 
-мар. 03, 2023 11:08:33 AM Logger.MyLogger log
-INFO: Введите реальную часть компл.числа:  - 34.0
-мар. 03, 2023 11:08:39 AM Logger.MyLogger log
-INFO: Введите мнимую часть компл.числа:  - 45.0
-мар. 03, 2023 11:08:42 AM Logger.MyLogger log
-INFO: Введите операцию (+,-,*,/):  - -
-мар. 03, 2023 11:08:48 AM Logger.MyLogger log
-INFO: Введите реальную часть компл.числа:  - 13.0
-мар. 03, 2023 11:08:52 AM Logger.MyLogger log
-INFO: Введите мнимую часть компл.числа:  - 15.0
-мар. 03, 2023 11:08:52 AM Logger.MyLogger log
-INFO: Выдан результат 34.0 + 45.0i - 13.0 + 15.0i =  21.0 + 30.0i
 мар. 03, 2023 4:26:08 PM Logger.MyLogger log
 INFO: ВЫБРАН ПУНКТ МЕНЮ => ОПЕРАЦИИ С РАЦИОНАЛЬНЫМИ ЧИСЛАМИ 
 мар. 03, 2023 4:26:25 PM Logger.MyLogger log
@@ -109,4 +65,40 @@ INFO: ВЫДАН РЕЗУЛЬТАТ (56.0 + 10.0i) - (-2.0-3.0i) =  (58.0 + 13.0
 мар. 03, 2023 4:44:34 PM Logger.MyLogger log
 INFO: ВЫБРАН ПУНКТ МЕНЮ => ПРОСМОТР ФАЙЛА ЛОГИРОВАНИЯ 
 мар. 03, 2023 4:44:34 PM Logger.MyLogger log
+INFO: HomeWorkSem05\src\CalculatorLog.txt - ВЫДАНО СОДЕРЖИМОЕ ЖУРНАЛА ЛОГГИРОВАНИЯ ПО ЗАПРОСУ 
+мар. 03, 2023 4:50:43 PM Logger.MyLogger log
+INFO: ВЫБРАН ПУНКТ МЕНЮ => ОПЕРАЦИИ С КОМПЛЕКСНЫМИ ЧИСЛАМИ 
+мар. 03, 2023 4:50:47 PM Logger.MyLogger log
+INFO: ВВЕДИТЕ ВЕЩЕСТВЕННУЮ ЧАСТЬ 1 КОМПЛЕКСНОГО ЧИСЛА:  => 56.0
+мар. 03, 2023 4:50:54 PM Logger.MyLogger log
+INFO: ВВЕДИТЕ МНИМУЮ ЧАСТЬ 1 КОМПЛЕКСНОГО ЧИСЛА:  => 12.0
+мар. 03, 2023 4:51:02 PM Logger.MyLogger log
+INFO: ВВЕДИТЕ ОПЕРАЦИЮ (+,-,*,/):  => "1"
+мар. 03, 2023 4:51:06 PM Logger.MyLogger log
+INFO: ВВЕДИТЕ ВЕЩЕСТВЕННУЮ ЧАСТЬ 2 КОМПЛЕКСНОГО ЧИСЛА:  => 4.0
+мар. 03, 2023 4:51:17 PM Logger.MyLogger log
+INFO: ВВЕДИТЕ МНИМУЮ ЧАСТЬ 2 КОМПЛЕКСНОГО ЧИСЛА:  => 4.0
+мар. 03, 2023 4:51:17 PM Logger.MyLogger log
+INFO: ВЫДАН РЕЗУЛЬТАТ (56.0 + 12.0i) 1 (4.0 + 4.0i) =  null
+мар. 03, 2023 4:52:05 PM Logger.MyLogger log
+INFO: ВЫБРАН ПУНКТ МЕНЮ => ПРОСМОТР ФАЙЛА ЛОГИРОВАНИЯ 
+мар. 03, 2023 4:52:05 PM Logger.MyLogger log
+INFO: HomeWorkSem05\src\CalculatorLog.txt - ВЫДАНО СОДЕРЖИМОЕ ЖУРНАЛА ЛОГГИРОВАНИЯ ПО ЗАПРОСУ 
+мар. 03, 2023 4:52:18 PM Logger.MyLogger log
+INFO: ВЫБРАН ПУНКТ МЕНЮ => ОПЕРАЦИИ С КОМПЛЕКСНЫМИ ЧИСЛАМИ 
+мар. 03, 2023 4:52:35 PM Logger.MyLogger log
+INFO: ВВЕДИТЕ ВЕЩЕСТВЕННУЮ ЧАСТЬ 1 КОМПЛЕКСНОГО ЧИСЛА:  => 36.0
+мар. 03, 2023 4:52:46 PM Logger.MyLogger log
+INFO: ВВЕДИТЕ МНИМУЮ ЧАСТЬ 1 КОМПЛЕКСНОГО ЧИСЛА:  => 12.0
+мар. 03, 2023 4:52:57 PM Logger.MyLogger log
+INFO: ВВЕДИТЕ ОПЕРАЦИЮ (+,-,*,/):  => "/"
+мар. 03, 2023 4:53:01 PM Logger.MyLogger log
+INFO: ВВЕДИТЕ ВЕЩЕСТВЕННУЮ ЧАСТЬ 2 КОМПЛЕКСНОГО ЧИСЛА:  => 6.0
+мар. 03, 2023 4:53:04 PM Logger.MyLogger log
+INFO: ВВЕДИТЕ МНИМУЮ ЧАСТЬ 2 КОМПЛЕКСНОГО ЧИСЛА:  => 4.0
+мар. 03, 2023 4:53:04 PM Logger.MyLogger log
+INFO: ВЫДАН РЕЗУЛЬТАТ (36.0 + 12.0i) / (6.0 + 4.0i) =  (5.076923076923077-1.3846153846153846i)
+мар. 03, 2023 4:53:34 PM Logger.MyLogger log
+INFO: ВЫБРАН ПУНКТ МЕНЮ => ПРОСМОТР ФАЙЛА ЛОГИРОВАНИЯ 
+мар. 03, 2023 4:53:34 PM Logger.MyLogger log
 INFO: HomeWorkSem05\src\CalculatorLog.txt - ВЫДАНО СОДЕРЖИМОЕ ЖУРНАЛА ЛОГГИРОВАНИЯ ПО ЗАПРОСУ 
