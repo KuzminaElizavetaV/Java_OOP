@@ -1,8 +1,7 @@
 package UI;
 
-import Infrastucture.CalcComplex;
+import Infrastucture.CalcComplexNumbers;
 import Infrastucture.CalcRational;
-import Infrastucture.Model;
 import MVP.*;
 
 import java.io.File;
@@ -35,7 +34,7 @@ public class App {
                 }
                 case 2 -> {
                     myLog.log("ВЫБРАН ПУНКТ МЕНЮ => ОПЕРАЦИИ С КОМПЛЕКСНЫМИ ЧИСЛАМИ ");
-                    presenter = new Presenter<>(new CalcComplex(), view);
+                    presenter = new Presenter<>(new CalcComplexNumbers(), view);
                     presenter.buttonClick(); //или так? buttonClickComplex();
                 }
                 case 3 -> {
