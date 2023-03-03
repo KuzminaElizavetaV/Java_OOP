@@ -1,7 +1,7 @@
 package UI;
 
 import Infrastucture.CalcComplexNumbers;
-import Infrastucture.CalcRational;
+import Infrastucture.CalcRationalNumbers;
 import MVP.*;
 
 import java.io.File;
@@ -29,7 +29,7 @@ public class App {
             switch (in.nextInt()) {
                 case 1 -> {
                     myLog.log("ВЫБРАН ПУНКТ МЕНЮ => ОПЕРАЦИИ С РАЦИОНАЛЬНЫМИ ЧИСЛАМИ ");
-                    presenter = new Presenter<>(new CalcRational(), view);
+                    presenter = new Presenter<>(new CalcRationalNumbers(), view);
                     presenter.buttonClick();//или сразу так? presenter.buttonClickRational();
                 }
                 case 2 -> {

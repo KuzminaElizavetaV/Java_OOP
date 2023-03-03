@@ -19,7 +19,7 @@ public class Presenter <T extends CalcModel> {
 
     //или создать отдельный класс для обработки PresenterComplex, экз-р которого запускать в App при соотв.выборе?
     public void buttonClick(){
-        if (this.model instanceof CalcRational) this.buttonClickRational();
+        if (this.model instanceof CalcRationalNumbers) this.buttonClickRational();
         else if (this.model instanceof CalcComplexNumbers) buttonClickComplex();
     }
     public void buttonClickRational() {
