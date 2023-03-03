@@ -12,7 +12,7 @@ public class ComplexNumber {
      * @param real вещественная часть
      * @param imaginary мнимая часть
      */
-    public ComplexNumber(double real, double imaginary) {// конструктор с параметрами
+    public ComplexNumber(double real, double imaginary) {
         this.real = real;
         this.imaginary = imaginary;
     }
@@ -43,7 +43,7 @@ public class ComplexNumber {
      * @param a другое комплексное число
      * @return новое комплексное число
      */
-    public ComplexNumber subtraction(ComplexNumber a) { //Вычитание комплексных чисел
+    public ComplexNumber subtraction(ComplexNumber a) {
         double real1 = a.getReal();
         double imaginary1 = a.getImaginary();
         double newReal = real - real1;
@@ -56,7 +56,7 @@ public class ComplexNumber {
      * @param a другое комплексное число
      * @return новое комплексное число
      */
-    public ComplexNumber multiplication(ComplexNumber a) { //умножение комплексных чисел
+    public ComplexNumber multiplication(ComplexNumber a) {
         double real1 = a.getReal();
         double imaginary1 = a.getImaginary();
         double newReal = real*real1 - imaginary *imaginary1;
@@ -69,7 +69,7 @@ public class ComplexNumber {
      * @param a другое комплексное число
      * @return новое комплексное число
      */
-    public ComplexNumber division(ComplexNumber a) {// Деление комплексных чисел
+    public ComplexNumber division(ComplexNumber a) {
         double real1 = a.getReal();
         double imaginary1 = a.getImaginary();
         double newReal = (real*real1 + imaginary *imaginary1)/(real1*real1 + imaginary1*imaginary1);
