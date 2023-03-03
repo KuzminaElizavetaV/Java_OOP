@@ -1,4 +1,4 @@
-package MVP;
+package UI;
 
 import java.io.File;
 

@@ -1,4 +1,4 @@
-package MVP;
+package Infrastucture;
 
 public abstract class CalcModel <T> implements Model<T> {
 

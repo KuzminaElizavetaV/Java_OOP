@@ -1,9 +1,10 @@
 package MVP;
 
-import Infrastucture.Complex;
+import Infrastucture.*;
 
 import java.util.logging.Logger;
 import Logger.MyLog;
+import UI.View;
 
 public class Presenter <T extends CalcModel> {
     static MyLog myLog = new MyLog(Logger.getLogger(Presenter.class.getName()));
@@ -53,10 +54,6 @@ public class Presenter <T extends CalcModel> {
             myLog.log(e.getMessage());
         }
         view.viewResult(String.format("%s", res), String.format("%s %s %s = ", firstNum, operation, secondNum));
-
-
     }
-
-
 }
 
