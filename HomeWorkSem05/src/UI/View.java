@@ -2,6 +2,9 @@ package UI;
 
 import java.io.File;
 
+/**
+ * Интерфейс Вид(Представление)
+ */
 public interface View {
     Double getValue(String title);
 
@@ -9,5 +12,5 @@ public interface View {
 
     void viewResult(String result, String title);
 
-    void viewLog(File file);
+    void viewLogger(File file);
 }

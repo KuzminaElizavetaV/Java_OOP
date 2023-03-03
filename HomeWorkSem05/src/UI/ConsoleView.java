@@ -16,7 +16,7 @@ public class ConsoleView implements View {
 
     @Override
     public Double getValue(String title) {
-        System.out.println(title);//"Введите число:"
+        System.out.println(title); //ВВЕДИТЕ ЧИСЛО:
         Double num;
         if(scanner.hasNextDouble()){
             num = scanner.nextDouble();
@@ -52,7 +52,7 @@ public class ConsoleView implements View {
     }
 
     @Override
-    public void viewLog(File file) {//или прописать пусть к файлу в классе Config, как вариант
+    public void viewLogger(File file) {//или прописать пусть к файлу в классе Config, как вариант
         myLog.log(String.format("%s - выдано содержание файла логирования по запросу", file));
         try {
             FileReader fr = new FileReader(file);

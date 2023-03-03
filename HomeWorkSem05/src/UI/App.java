@@ -14,7 +14,6 @@ public class App {
     static MyLogger myLog = new MyLogger(Logger.getLogger(App.class.getName()));
 
     static View view = new ConsoleView();
-    //static Model model;
     static Presenter presenter;
 
     public static void start() {
@@ -39,7 +38,7 @@ public class App {
                 }
                 case 3 -> {
                     myLog.log("ВЫБРАН ПУНКТ МЕНЮ => ПРОСМОТР ФАЙЛА ЛОГИРОВАНИЯ ");
-                    view.viewLog(new File("HomeWorkSem05\\src\\CalculatorLog.txt"));
+                    view.viewLogger(new File("HomeWorkSem05\\src\\CalculatorLog.txt"));
                 }
                 case 4 -> {
                     myLog.log("ВЫБРАН ПУНКТ МЕНЮ => ВЫХОД ИЗ ПРОГРАММЫ");

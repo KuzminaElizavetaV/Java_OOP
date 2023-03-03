@@ -6,6 +6,10 @@ import java.util.logging.Logger;
 import Logger.MyLogger;
 import UI.View;
 
+/**
+ * Класс управления связью между Model(пакет Infrastructure) и View (пакет UI)
+ * @param <T> обобщеннный тип, но только для тех классов, которые наследуются от астрактного класса CalcModel
+ */
 public class Presenter <T extends CalcModel> {
     static MyLogger myLog = new MyLogger(Logger.getLogger(Presenter.class.getName()));
 
@@ -17,16 +21,15 @@ public class Presenter <T extends CalcModel> {
         view = v;
     }
 
-    //или создать отдельный класс для обработки PresenterComplex, экз-р которого запускать в App при соотв.выборе?
     public void buttonClick(){
         if (this.model instanceof CalcRationalNumbers) this.buttonClickRational();
         else if (this.model instanceof CalcComplexNumbers) buttonClickComplex();
     }
     public void buttonClickRational() {
         Double res = null;
-        Double first = view.getValue("Введите число: ");
-        char operation = view.getOperation("Введите операцию (+,-,*,/): ");
-        Double second = view.getValue("Введите число: ");
+        Double first = view.getValue("ВВЕДИТЕ ЧИСЛО: ");
+        char operation = view.getOperation("ВВЕДИТЕ ОПЕРАЦИЮ (+,-,*,/): ");
+        Double second = view.getValue("ВВЕДИТЕ ЧИСЛО: ");
         model.setX(first);
         model.setY(second);
         try {
@@ -40,11 +43,11 @@ public class Presenter <T extends CalcModel> {
     }
     public void buttonClickComplex(){
         ComplexNumber res = null;
-        ComplexNumber firstNum = new ComplexNumber(view.getValue("Введите реальную часть компл.числа: "),
-                view.getValue("Введите мнимую часть компл.числа: "));
-        char operation = view.getOperation("Введите операцию (+,-,*,/): ");
-        ComplexNumber secondNum = new ComplexNumber(view.getValue("Введите реальную часть компл.числа: "),
-                view.getValue("Введите мнимую часть компл.числа: "));
+        ComplexNumber firstNum = new ComplexNumber(view.getValue("ВВЕДИТЕ ВЕЩЕСТВЕННУЮ ЧАСТЬ 1 КОМПЛЕКСНОГО ЧИСЛА: "),
+                view.getValue("ВВЕДИТЕ МНИМУЮ ЧАСТЬ 1 КОМПЛЕКСНОГО ЧИСЛА: "));
+        char operation = view.getOperation("ВВЕДИТЕ ОПЕРАЦИЮ (+,-,*,/): ");
+        ComplexNumber secondNum = new ComplexNumber(view.getValue("ВВЕДИТЕ ВЕЩЕСТВЕННУЮ ЧАСТЬ 2 КОМПЛЕКСНОГО ЧИСЛА: "),
+                view.getValue("ВВЕДИТЕ МНИМУЮ ЧАСТЬ 2 КОМПЛЕКСНОГО ЧИСЛА: "));
         model.setX(firstNum);
         model.setY(secondNum);
         try {
