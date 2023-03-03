@@ -1,21 +1,29 @@
 package Logger;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
-public class MyLog {
+/**
+ * Класс МойЖурнал (Логгирование)
+ */
+public class MyLogger {
     Logger logger;
-    File file;
 
-
-    public MyLog(Logger logger) {
+    /**
+     * Конструктор класса МойЖурнал
+     * @param logger запись лога конкретной подсистемы
+     */
+    public MyLogger(Logger logger) {
         this.logger = logger;
     }
 
-    public void log(String info) {
+    /**
+     * Метод логирования информации
+     * @param info информация для сохранения в журнале логгирования
+     */
+    public void log(String info) {Т
         try {
             FileHandler fh = new FileHandler("HomeWorkSem05\\src\\CalculatorLog.txt", true);
             logger.addHandler(fh);

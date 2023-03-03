@@ -3,11 +3,11 @@ package MVP;
 import Infrastucture.*;
 
 import java.util.logging.Logger;
-import Logger.MyLog;
+import Logger.MyLogger;
 import UI.View;
 
 public class Presenter <T extends CalcModel> {
-    static MyLog myLog = new MyLog(Logger.getLogger(Presenter.class.getName()));
+    static MyLogger myLog = new MyLogger(Logger.getLogger(Presenter.class.getName()));
 
     View view;
     Model model;

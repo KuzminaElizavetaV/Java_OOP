@@ -5,10 +5,10 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.Scanner;
 import java.util.logging.Logger;
-import Logger.MyLog;
+import Logger.MyLogger;
 
 public class ConsoleView implements View {
-    static MyLog myLog = new MyLog(Logger.getLogger(ConsoleView.class.getName()));
+    static MyLogger myLog = new MyLogger(Logger.getLogger(ConsoleView.class.getName()));
     Scanner scanner;
     public ConsoleView() {
         this.scanner = new Scanner(System.in);

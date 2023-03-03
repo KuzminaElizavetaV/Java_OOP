@@ -7,11 +7,11 @@ import MVP.*;
 import java.io.File;
 import java.util.Scanner;
 import java.util.logging.Logger;
-import Logger.MyLog;
+import Logger.MyLogger;
 
 public class App {
     static Scanner in = new Scanner(System.in);
-    static MyLog myLog = new MyLog(Logger.getLogger(App.class.getName()));
+    static MyLogger myLog = new MyLogger(Logger.getLogger(App.class.getName()));
 
     static View view = new ConsoleView();
     //static Model model;
