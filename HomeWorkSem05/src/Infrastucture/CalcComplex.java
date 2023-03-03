@@ -1,32 +1,30 @@
 package Infrastucture;
 
-import Infrastucture.CalcModel;
-import Infrastucture.Complex;
 
-public class CalcComplex extends CalcModel<Complex> {
+public class CalcComplex extends CalcModel<ComplexNumber> {
     @Override
-    public Complex result(char operation) throws Exception {
-        Complex result = null;
+    public ComplexNumber result(char operation) throws Exception {
+        ComplexNumber result = null;
         switch (operation) {
-            case '+' -> result = this.x.add(this.y);
-            case '-' -> result = this.x.sub(this.y);
-            case '*' -> result = this.x.mul(this.y);
+            case '+' -> result = this.x.addition(this.y);
+            case '-' -> result = this.x.subtraction(this.y);
+            case '*' -> result = this.x.multiplication(this.y);
             case '/' -> {
-                if (this.y.getReal() == 0 && this.y.getImage()==0) {
+                if (this.y.getReal() == 0 && this.y.getImaginary()==0) {
                     throw new Exception("Деление на --0--!");
-                } else result = this.x.div(this.y);
+                } else result = this.x.division(this.y);
             }
             default -> System.out.println("Операция не распознана. Повторите ввод.");
         }
         return result;    }
 
     @Override
-    public void setX(Complex value) {
+    public void setX(ComplexNumber value) {
         this.x = value;
     }
 
     @Override
-    public void setY(Complex value) {
+    public void setY(ComplexNumber value) {
         this.y = value;
     }
 

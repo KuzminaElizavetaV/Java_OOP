@@ -39,16 +39,16 @@ public class Presenter <T extends CalcModel> {
 
     }
     public void buttonClickComplex(){
-        Complex res = null;
-        Complex firstNum = new Complex(view.getValue("Введите реальную часть компл.числа: "),
+        ComplexNumber res = null;
+        ComplexNumber firstNum = new ComplexNumber(view.getValue("Введите реальную часть компл.числа: "),
                 view.getValue("Введите мнимую часть компл.числа: "));
         char operation = view.getOperation("Введите операцию (+,-,*,/): ");
-        Complex secondNum = new Complex(view.getValue("Введите реальную часть компл.числа: "),
+        ComplexNumber secondNum = new ComplexNumber(view.getValue("Введите реальную часть компл.числа: "),
                 view.getValue("Введите мнимую часть компл.числа: "));
         model.setX(firstNum);
         model.setY(secondNum);
         try {
-            res = (Complex) model.result(operation);}
+            res = (ComplexNumber) model.result(operation);}
         catch (Exception e){
             e.printStackTrace();
             myLog.log(e.getMessage());
