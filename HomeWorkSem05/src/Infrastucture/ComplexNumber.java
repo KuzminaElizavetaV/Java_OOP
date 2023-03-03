@@ -85,9 +85,9 @@ public class ComplexNumber {
     public String toString() {
         StringBuilder complex = new StringBuilder();
         if(imaginary > 0){
-            complex.append(real).append(" + ").append(imaginary).append("i");
+            complex.append("(").append(real).append(" + ").append(imaginary).append("i").append(")");
         }else if(imaginary < 0){
-            complex.append(real).append(imaginary).append("i");
+            complex.append("(").append(real).append(imaginary).append("i").append(")");
         }else{
             complex.append(real);
         }

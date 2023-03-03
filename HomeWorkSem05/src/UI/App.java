@@ -9,6 +9,9 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 import Logger.MyLogger;
 
+/**
+ * Запуск основного меню программы
+ */
 public class App {
     static Scanner in = new Scanner(System.in);
     static MyLogger myLog = new MyLogger(Logger.getLogger(App.class.getName()));
@@ -18,6 +21,7 @@ public class App {
 
     public static void start() {
         while (true) {
+            System.out.println();
             System.out.println("""
                     ***** ВВЕДИТЕ ЧИСЛО, СОГЛАСНО ПУНКТУ МЕНЮ *****:
                         1 => ОПЕРАЦИИ С РАЦИОНАЛЬНЫМИ ЧИСЛАМИ
@@ -29,12 +33,12 @@ public class App {
                 case 1 -> {
                     myLog.log("ВЫБРАН ПУНКТ МЕНЮ => ОПЕРАЦИИ С РАЦИОНАЛЬНЫМИ ЧИСЛАМИ ");
                     presenter = new Presenter<>(new CalcRationalNumbers(), view);
-                    presenter.buttonClick();//или сразу так? presenter.buttonClickRational();
+                    presenter.buttonClick(); //или presenter.buttonClickRational();
                 }
                 case 2 -> {
                     myLog.log("ВЫБРАН ПУНКТ МЕНЮ => ОПЕРАЦИИ С КОМПЛЕКСНЫМИ ЧИСЛАМИ ");
                     presenter = new Presenter<>(new CalcComplexNumbers(), view);
-                    presenter.buttonClick(); //или так? buttonClickComplex();
+                    presenter.buttonClick(); //или buttonClickComplex();
                 }
                 case 3 -> {
                     myLog.log("ВЫБРАН ПУНКТ МЕНЮ => ПРОСМОТР ФАЙЛА ЛОГИРОВАНИЯ ");
