@@ -23,7 +23,7 @@ public class MyLogger {
      * Метод логирования информации
      * @param info информация для сохранения в журнале логгирования
      */
-    public void log(String info) {Т
+    public void log(String info) {
         try {
             FileHandler fh = new FileHandler("HomeWorkSem05\\src\\CalculatorLog.txt", true);
             logger.addHandler(fh);
