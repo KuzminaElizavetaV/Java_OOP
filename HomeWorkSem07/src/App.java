@@ -27,7 +27,6 @@ class Print implements IInterface {
 
     @Override
     public void print() {
-
         if (v == null){
             System.out.println("Переменная v инициализирована с помощью класса Print, который имплементирует интерфейс IInterface," +
                     " сейчас она равна null, что значит ссылка в пустоту.\nКод все равно работает. Принципы SOLID не нарушены.");
